@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="page">
+
+        <div class="home-card">
+
+            <h1 style="font-family: 'Spiritual Mountain';">Arithmetic Mean</h1>
+
+            <p class="subtitle" style="font-family: 'Classic Notes';">
+                Chapter 24: Measures of Central Tendency
+            </p>
+
+            <button onclick="showTheory()">
+                Theory
+            </button>
+
+            <button onclick="loadProblem(0)">
+                Problem 1
+            </button>
+
+            <button onclick="loadProblem(1)">
+                Problem 2
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= THEORY ================= -->
+
+    <section id="theory" class="page hidden">
+
+        <div class="topbar">
+
+            <button onclick="goHome()">
+                🏠 Home
+            </button>
+
+            <h2>What is Mean?</h2>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="theory-card">
+
+    <h2>What is Mean?</h2>
+
+    <p class="definition">
+        The mean of <i>n</i> numbers
+        <i>x</i><sub>1</sub>,
+        <i>x</i><sub>2</sub>,
+        <i>x</i><sub>3</sub>,
+        ............,
+        <i>x</i><sub>n</sub>
+        is
+    </p>
+
+    <div class="formula">
+
+    <span class="mean-text">Mean =</span>
+
+    <div class="fraction">
+
+        <span class="top">
+            <i>x</i><sub>1</sub> +
+            <i>x</i><sub>2</sub> +
+            <i>x</i><sub>3</sub> +
+            &middot;&middot;&middot; +
+            <i>x</i><sub>n</sub>
+        </span>
+
+        <span class="bottom">
+            n
+        </span>
+
+    </div>
+
+    <span class="equals">=</span>
+
+    <div class="fraction">
+
+        <span class="top">
+            ∑<i>x</i>
+        </span>
+
+        <span class="bottom">
+            n
+        </span>
+
+    </div>
+
+</div>
+
+    <p class="note">
+        The Greek letter <b>&Sigma;</b> (called sigma) represents
+        the sum of all the observations.
+    </p>
+
+</div>
+
+    </section>
+
+
+
+
+    <!-- ================= PROBLEM ================= -->
+
+    <section id="problem" class="page hidden">
+
+        <div class="topbar">
+
+            <button onclick="goHome()">
+                🏠 Home
+            </button>
+
+            <h2 id="question">
+
+            </h2>
+
+            <button onclick="resetProblem()">
+                🔄 Reset
+            </button>
+
+        </div>
+
+
+
+        <table>
+
+            <tr>
+
+                <th>Student</th>
+
+                <th id="name0"></th>
+
+                <th id="name1"></th>
+
+                <th id="name2"></th>
+
+                <th id="name3"></th>
+
+                <th id="name4"></th>
+
+            </tr>
+
+            <tr>
+
+                <th>Marks</th>
+
+                <td id="m0"></td>
+
+                <td id="m1"></td>
+
+                <td id="m2"></td>
+
+                <td id="m3"></td>
+
+                <td id="m4"></td>
+
+            </tr>
+
+        </table>
+
+
+
+        <!-- Cube Area -->
+
+        <div id="stackArea">
+
+        </div>
+
+
+
+        <!-- Bottom -->
+
+        <div class="bottom-panel">
+
+            <div class="box">
+
+                <span>Total</span>
+
+                <h3 id="total">
+
+                </h3>
+
+            </div>
+
+            <div class="box">
+
+                <span>Students</span>
+
+                <h3>5</h3>
+
+            </div>
+
+            <div class="box">
+
+                <span>Mean</span>
+
+                <h3 id="mean">
+
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="success">
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
