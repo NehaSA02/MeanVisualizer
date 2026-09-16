@@ -35,10 +35,17 @@
                 Problem 2
             </button>
 
+            <button onclick="loadProblem(2)">
+                Ex 24(A) Question 1.i
+            </button>
+
+            <button onclick="loadProblem(3)">
+                Ex 24(A) Question 1.ii
+            </button>
+
         </div>
 
     </section>
-
 
 
     <!-- ================= THEORY ================= -->
@@ -60,64 +67,62 @@
 
         <div class="theory-card">
 
-    <h2>What is Mean?</h2>
+            <h2>What is Mean?</h2>
 
-    <p class="definition">
-        The mean of <i>n</i> numbers
-        <i>x</i><sub>1</sub>,
-        <i>x</i><sub>2</sub>,
-        <i>x</i><sub>3</sub>,
-        ............,
-        <i>x</i><sub>n</sub>
-        is
-    </p>
+            <p class="definition">
+                The mean of <i>n</i> numbers
+                <i>x</i><sub>1</sub>,
+                <i>x</i><sub>2</sub>,
+                <i>x</i><sub>3</sub>,
+                ............,
+                <i>x</i><sub>n</sub>
+                is
+            </p>
 
-    <div class="formula">
+            <div class="formula">
 
-    <span class="mean-text">Mean =</span>
+                <span class="mean-text">Mean =</span>
 
-    <div class="fraction">
+                <div class="fraction">
 
-        <span class="top">
-            <i>x</i><sub>1</sub> +
-            <i>x</i><sub>2</sub> +
-            <i>x</i><sub>3</sub> +
-            &middot;&middot;&middot; +
-            <i>x</i><sub>n</sub>
-        </span>
+                    <span class="top">
+                        <i>x</i><sub>1</sub> +
+                        <i>x</i><sub>2</sub> +
+                        <i>x</i><sub>3</sub> +
+                        &middot;&middot;&middot; +
+                        <i>x</i><sub>n</sub>
+                    </span>
 
-        <span class="bottom">
-            n
-        </span>
+                    <span class="bottom">
+                        n
+                    </span>
 
-    </div>
+                </div>
 
-    <span class="equals">=</span>
+                <span class="equals">=</span>
 
-    <div class="fraction">
+                <div class="fraction">
 
-        <span class="top">
-            ∑<i>x</i>
-        </span>
+                    <span class="top">
+                        ∑<i>x</i>
+                    </span>
 
-        <span class="bottom">
-            n
-        </span>
+                    <span class="bottom">
+                        n
+                    </span>
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
-    <p class="note">
-        The Greek letter <b>&Sigma;</b> (called sigma) represents
-        the sum of all the observations.
-    </p>
+            <p class="note">
+                The Greek letter <b>&Sigma;</b> (called sigma) represents
+                the sum of all the observations.
+            </p>
 
-</div>
+        </div>
 
     </section>
-
-
 
 
     <!-- ================= PROBLEM ================= -->
@@ -131,7 +136,6 @@
             </button>
 
             <h2 id="question">
-
             </h2>
 
             <button onclick="resetProblem()">
@@ -141,51 +145,23 @@
         </div>
 
 
-
         <table>
 
-            <tr>
-
+            <tr id="studentRow">
                 <th>Student</th>
-
-                <th id="name0"></th>
-
-                <th id="name1"></th>
-
-                <th id="name2"></th>
-
-                <th id="name3"></th>
-
-                <th id="name4"></th>
-
             </tr>
 
-            <tr>
-
+            <tr id="marksRow">
                 <th>Marks</th>
-
-                <td id="m0"></td>
-
-                <td id="m1"></td>
-
-                <td id="m2"></td>
-
-                <td id="m3"></td>
-
-                <td id="m4"></td>
-
             </tr>
 
         </table>
 
 
-
         <!-- Cube Area -->
 
         <div id="stackArea">
-
         </div>
-
 
 
         <!-- Bottom -->
@@ -197,7 +173,6 @@
                 <span>Total</span>
 
                 <h3 id="total">
-
                 </h3>
 
             </div>
@@ -206,7 +181,7 @@
 
                 <span>Students</span>
 
-                <h3>5</h3>
+                <h3 id="studentCount">5</h3>
 
             </div>
 
@@ -215,7 +190,6 @@
                 <span>Mean</span>
 
                 <h3 id="mean">
-
                 </h3>
 
             </div>
@@ -223,9 +197,7 @@
         </div>
 
 
-
         <div id="success">
-
         </div>
 
     </section>
