@@ -101,7 +101,6 @@ function loadProblem(index){
 }
 
 
-
 function resetProblem(){
 
     values=[...original];
@@ -171,6 +170,64 @@ function drawStacks(){
     const area=document.getElementById("stackArea");
 
     area.innerHTML="";
+
+
+    /*
+       Find the tallest stack.
+       The cube size is then reduced automatically
+       if the stack is too tall.
+    */
+
+    const maxValue = Math.max(...values);
+
+    let cubeSize;
+
+
+    if(maxValue <= 8){
+
+        cubeSize = 60;
+
+    }
+    else if(maxValue <= 10){
+
+        cubeSize = 52;
+
+    }
+    else if(maxValue <= 12){
+
+        cubeSize = 45;
+
+    }
+    else if(maxValue <= 16){
+
+        cubeSize = 36;
+
+    }
+    else if(maxValue <= 20){
+
+        cubeSize = 30;
+
+    }
+    else{
+
+        cubeSize = 22;
+
+    }
+
+
+    /*
+       Send the calculated size to CSS.
+    */
+
+    area.style.setProperty(
+        "--cube-size",
+        cubeSize + "px"
+    );
+
+    area.style.setProperty(
+        "--cube-gap",
+        Math.max(1, cubeSize * 0.05) + "px"
+    );
 
 
     values.forEach((count,index)=>{
